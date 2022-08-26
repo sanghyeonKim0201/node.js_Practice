@@ -11,10 +11,13 @@ const server = app.listen(port, ()=>{
     console.log('start');
 });
 
-app.get('/beauty', (req, res) =>{
+app.get('/sing', (req, res) =>{
     res.send('뷰티용품 쇼핑 페이지임');
 });
 
-app.get('/', (req,res)=>{
+app.get('/Login', (req,res)=>{
     res.sendfile(__dirname + '/public/LoginExam.html')
+});
+app.get('/Main', (req, res)=>{
+    res.send('메인');
 });
