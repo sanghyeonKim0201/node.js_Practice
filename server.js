@@ -16,8 +16,5 @@ app.get('/sing', (req, res) =>{
 });
 
 app.get('/Login', (req,res)=>{
-    res.sendfile(__dirname + '/public/LoginExam.html')
-});
-app.get('/Main', (req, res)=>{
-    res.send('메인');
+    res.sendfile(__dirname + '/public/Login/LoginExam.html')
 });
