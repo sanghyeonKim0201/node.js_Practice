@@ -1,9 +1,13 @@
 
-const id = document.getElementById("idTxt"),
-pw = document.getElementById("#pwTxt"),
-loginBtn = document.getElementById("#loginBtn");
+const id = document.querySelector("#id");
+const pw = document.querySelector("#pw");
+const login = document.querySelector(".login");
 
-loginBtn.addEventListener("click", function(){
-    console.log("hellow");
-});
+loginEvent = function(){
+    console.log("hi");
+}
+
+login.addEventListener("click", loginEvent);
+
+
 
