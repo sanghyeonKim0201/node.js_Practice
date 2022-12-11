@@ -1,3 +1,4 @@
+
 const output = {
     home: (req, res)=>{
         res.render("home/index");
@@ -12,10 +13,7 @@ const output = {
 
 const process = {
     login: (req, res)=>{
-        const id = req.body.id,
-        pw = req.body.pw
-
-        const db = require("")
+        
     }
 }
 
