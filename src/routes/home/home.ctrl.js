@@ -35,6 +35,14 @@ const process = {
         
     },
     sign: (req, res)=>{
+
+        if(req.body.pwcheck !== req.body.pw){
+            return res.json({
+                success: false,
+                msg: "비밀번호와 비밀번호 체크가 맞지 않습니다"
+            });
+        }
+
         db.query("select * from user where u_id = ?", [req.body.id], (err, rows, fields)=>{
             if(err){
                 console.log(err);
@@ -45,17 +53,18 @@ const process = {
                     msg: "아이디가 존재합니다"
                 });
             }
+            res.json({
+                success: true,
+                msg: "회원가입 완료"
+            })
             
         });
+
+        // db.end();
         db.query("insert into user values(0, ?,?,?,?,?)", [req.body.id, req.body.pw, req.body.name, req.body.phone, req.body.email], (err, result, fields)=>{
             if(err){
                 console.log(err);
             }
-
-            return res.json({
-                success: true,
-                msg: "회원가입 완료"
-            });
         });
     }
 }

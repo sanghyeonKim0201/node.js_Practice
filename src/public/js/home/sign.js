@@ -17,10 +17,6 @@ for(var i = 6; i <= 7; i++){
                 phone: DOM[4].value,
                 email: DOM[5].value
             }
-            if(DOM[2].value !== DOM[3].value){
-                alert("비밀번호와 비밀번호체크가 같지 않습니다");
-            }
-
             fetch("/sign", {
                 method: "POST",
                 headers:{
