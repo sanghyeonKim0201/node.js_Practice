@@ -14,8 +14,15 @@ login.addEventListener("click", ()=>{
             "Content-Type" : "application/json"
         },
         body: JSON.stringify(req)
+    })
+    .then((res) =>res.json())
+    .then((res)=>{
+        if(res.success){
+            alert(res.msg);
+        }else{
+            alert(res.msg);
+        }
     });
-    
 });
 
 
