@@ -21,6 +21,7 @@ login.addEventListener("click", ()=>{
             alert(res.msg);
         }else{
             alert(res.msg);
+            window.location.reload();
         }
     });
 });

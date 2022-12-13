@@ -60,7 +60,6 @@ const process = {
             
         });
 
-        // db.end();
         db.query("insert into user values(0, ?,?,?,?,?)", [req.body.id, req.body.pw, req.body.name, req.body.phone, req.body.email], (err, result, fields)=>{
             if(err){
                 console.log(err);
