@@ -1,5 +1,5 @@
-const db = require("../../../db.js");
-
+const db = require("../db/db.js");
+const user = require("../models/user.js");
 const output = {
     home: (req, res)=>{
         res.render("home/index");
@@ -32,6 +32,14 @@ const process = {
             });
             
         });
+        // user.findUser("select * from where u_id = ? and u_pw = ?", [req.body.id, req.body.pw], (err, rows, fields)=>{
+        //     if(err){
+        //         console.log(err);
+        //     }
+        //     if(rows.length > 0){
+
+        //     }
+        // });
         
     },
     sign: (req, res)=>{
